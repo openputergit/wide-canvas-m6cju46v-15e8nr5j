@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportune Times</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .logo-container img {
+            transition: transform 0.3s ease;
+        }
+        .logo-container:hover img {
+            transform: scale(1.05);
+        }
+        .brick-pattern {
+            background-image: linear-gradient(rgba(71, 130, 153, 0.8), rgba(71, 130, 153, 0.8)),
+                            url('data:image/svg+xml,<svg width="42" height="44" viewBox="0 0 42 44" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h42v44H0V0zm1 1h40v20H1V1zM1 23h40v20H1V23z" fill="none" stroke="rgba(255,255,255,0.1)" /></svg>');
+            background-size: 42px 44px;
+        }
+    </style>
+</head>
+<body class="min-h-screen brick-pattern text-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header with Logo -->
+        <header class="mb-12">
+            <div class="logo-container flex justify-center items-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/widecanvas-d0dd4.appspot.com/o/logos%2Fopportune_times.jpg?alt=media&token=44856035-1278-4d94-83ec-499617265d9a" 
+                     alt="Opportune Times Logo" 
+                     class="max-w-[200px] md:max-w-[300px] rounded-lg shadow-lg">
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-xl">
+                <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">Welcome to Opportune Times</h1>
+                <p class="text-lg md:text-xl text-center mb-8">
+                    Your gateway to timely opportunities and meaningful connections.
+                </p>
+                
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <div class="p-6 bg-white/5 rounded-lg hover:bg-white/10 transition duration-300">
+                        <i class="bi bi-clock-history text-4xl mb-4 block text-center"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-center">Time Management</h3>
+                        <p class="text-gray-300 text-center">Optimize your schedule and make every moment count</p>
+                    </div>
+                    <div class="p-6 bg-white/5 rounded-lg hover:bg-white/10 transition duration-300">
+                        <i class="bi bi-graph-up-arrow text-4xl mb-4 block text-center"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-center">Growth Tracking</h3>
+                        <p class="text-gray-300 text-center">Monitor your progress and celebrate achievements</p>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center">
+                    <button class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-sm text-gray-400">
+            <p>&copy; 2024 Opportune Times. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add loading animation when clicking the CTA button
+        document.querySelector('button').addEventListener('click', function() {
+            this.innerHTML = '<i class="bi bi-arrow-repeat animate-spin"></i> Loading...';
+            setTimeout(() => {
+                this.innerHTML = 'Get Started';
+                alert('Thank you for your interest! We\'ll be launching soon.');
+            }, 1500);
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
